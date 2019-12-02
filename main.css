@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    /*background-image: url("https://wallpaperaccess.com/full/96464.jpg");*/
+    background-repeat: no-repeat;
+    font-family: 'Work Sans', sans-serif; /*Bahnschrift SemiBold;''*/
+    font-weight: 200;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    padding: 0px 15px;
+    font-size: 14px;
+    line-height: 60px;
+    position: relative;
+    z-index: 1; 
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav {
+    position: fixed;             /*This fixes the position to top*/
+    text-align: right;
+    z-index: 1;
+    background: white;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.name {
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: black;
+    text-align: left;
+    padding-left: 21px;
+    padding-top: 21px;
+}
+
+.menu li a:hover {
+    background: #CCCCCC;
+    color: #1f1f1f;
+    transition-duration: 0.2s;
+}
+
+.menu li a::before {
+    content: '';   
+    height: 3px;
+    background-color: black;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+.bg {
+    background-image: url('https://i.pinimg.com/originals/67/b3/ac/67b3ac50786507a7fcbe0b3202f15350.jpg');
+    width: 100%;
+    height: 100vh;
+}
+
+.gototop {
+    position: fixed;
+    bottom: 40px;
+    right: 50px;
+    width: 50px;
+    font-size: 25px;
+    height: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    background-color: whitesmoke;
+    color:blueviolet;
+    opacity: 0.45;
+}
+
+/* MENU WHEN SMALL SCREEN */
+
+.show-menu-btn, .hide-menu-btn {
+    transition-duration: 0.4s;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.show-menu-btn {
+    float: right;
+}
+
+.show-menu-btn i {
+    line-height: 60px;
+}
+
+.show-menu-btn:hover, .hide-menu-btn:hover{
+    color:#3b3b3b;
+} 
+
+#chk {
+    position: fixed;
+    visibility: hidden;
+    z-index: -1111;
+}
+
+@media screen and (max-width:820px) {
+    .show-menu-btn,.hide-menu-btn {
+        display: block;
+    }
+
+    .show-menu-btn {
+        position: relative;
+        right: 20px;
+    }
+
+    .menu {
+        position: fixed;
+        width: 180px;
+        height: 100vh;
+        background: white;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 80px 0px;
+        line-height: normal;
+        transition-duration: 0.7s;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .menu li {
+        display: block;
+    }
+
+    .hide-menu-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .close1 {
+        position: absolute;
+        top: 2px;
+        right: 22px;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    #chk:checked ~ .menu {
+        right: 0;
+    }
+}
+
+.sections {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.about {
+    padding: 90px 120px 300px 120px;
+    background-color: white;
+}
+
+.section2 {
+    padding: 120px;
+    background-color: #F1F1F1;
+}
+
+.section3 {
+    padding: 120px;
+    background-color: white;
+}
+
+.section4 {
+    padding: 120px;
+    background-color: #F1F1F1;
+}
+
+.section5 {
+    padding: 120px;
+    background-color: white;
+}
+
+footer {
+    padding: 50px 120px 180px 120px;
+    background-color: #616161;
+    display: flex;
+    flex-direction: row;
+}
+
+footer div {
+    color: white;
+    margin: auto;
+}
+
+.icons {
+    position: relative;
+    font-size: 70px;
+    color: #212529;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.icons li {
+    margin: auto;
+    text-align: center;
+}
+
+.title1 {
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    bottom: 18px;
+}
+
+.text1 {
+    position: relative;
+    font-size: 17px;
+    text-align: center;
+    top: 10px;
+   
+}
+
+.underline-style {
+    border-top: 2px solid #8c8b8b;
+    position: relative;
+    top: 20px;
+    width: 50%;
+    opacity: 0.4;
+    margin: auto; 
+}
+
+
+
+@media (min-width:800px) {
+    .icons {
+        position: relative;
+        font-size: 70px;
+        color: #212529;
+        list-style-type: none;
+        display: flex;
+        top: 40px;
+    }
+
+    .underline-style {
+        border-top: 2px solid #8c8b8b;
+        position: relative;
+        top: 20px;
+        right: 100%;
+        width: 300%;
+        opacity: 0.4;
+        margin: auto; 
+    }
+}
